@@ -20,7 +20,7 @@ class MyDocument extends Document {
         <Head>
           <Favicon />
         </Head>
-        <body>
+        <body className='dark:bg-gray-800 dark:text-white'>
           <Main />
           <NextScript />
         </body>
