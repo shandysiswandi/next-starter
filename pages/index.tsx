@@ -15,7 +15,9 @@ export default function Home() {
 
       <div className='flex h-screen'>
         <div className='m-auto text-center'>
-          <h1 className='dark:text-white mb-20 text-9xl'>{t('welcome')}</h1>
+          <h1 className='dark:text-white mb-20 text-9xl'>
+            {t('welcome', { name: 'PAPA' })}
+          </h1>
           <button
             className='py-2 px-10 bg-blue-500 rounded-md focus:outline-none text-white'
             onClick={() => setTheme(theme == 'light' ? 'dark' : 'light')}
