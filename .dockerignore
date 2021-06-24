@@ -1,6 +1,7 @@
 .git/
 .next/
 .vscode/
+.github/
 node_modules/
 
 .dockerignore
