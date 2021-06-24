@@ -1,29 +1,27 @@
-import { useTheme } from 'next-themes';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import nextI18NextConfig from 'i18next.config';
 import { Head } from '../components/Head';
-import { SwitchDarkMode } from 'components/switchs/SwitchDarkMode';
+import { HeaderWelcome } from 'components/headers/HeaderWelcome';
 
 export default function Home() {
-  const { theme, setTheme } = useTheme();
   const { t } = useTranslation('common');
 
   return (
     <>
       <Head title='Home' />
 
-      <div className='flex h-screen'>
-        <div className='m-auto text-center'>
-          <h1 className='dark:text-white mb-20 text-9xl'>
-            {t('welcome', { name: 'PAPA' })}
-          </h1>
+      <div className='flex flex-col min-h-screen'>
+        <HeaderWelcome />
 
-          <div className='flex justify-center border p-5'>
-            <SwitchDarkMode isDark={theme === 'dark'} />
+        <main className='flex flex-1'>
+          <div className='m-auto text-center'>
+            <h1 className='dark:text-white mb-20 text-9xl'>
+              {t('welcome', { name: 'PAPA' })}
+            </h1>
           </div>
-        </div>
+        </main>
       </div>
     </>
   );
