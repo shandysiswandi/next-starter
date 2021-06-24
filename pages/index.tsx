@@ -4,6 +4,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import nextI18NextConfig from 'i18next.config';
 import { Head } from '../components/Head';
+import { SwitchDarkMode } from 'components/switchs/SwitchDarkMode';
 
 export default function Home() {
   const { theme, setTheme } = useTheme();
@@ -18,12 +19,10 @@ export default function Home() {
           <h1 className='dark:text-white mb-20 text-9xl'>
             {t('welcome', { name: 'PAPA' })}
           </h1>
-          <button
-            className='py-2 px-10 bg-blue-500 rounded-md focus:outline-none text-white'
-            onClick={() => setTheme(theme == 'light' ? 'dark' : 'light')}
-          >
-            {theme == 'light' ? 'Dark' : 'Light'}
-          </button>
+
+          <div className='flex justify-center border p-5'>
+            <SwitchDarkMode isDark={theme === 'dark'} />
+          </div>
         </div>
       </div>
     </>
