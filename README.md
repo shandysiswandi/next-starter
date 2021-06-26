@@ -1,2 +1,2 @@
 # NestJS Starter
-NextJS Starter Project -- with tailwind, typescript, axios, and jest for testing.
+NextJS Starter Project -- It has been a long time since we started next-boilerplate project. We are proud that it helped many frontend developers around the globe to speed up their frontend development cycles.

@@ -3,20 +3,18 @@ import { ThemeProvider } from 'next-themes';
 import { Provider } from 'react-redux';
 import { appWithTranslation } from 'next-i18next';
 
-import { store } from 'store';
-import nextI18NextConfig from 'i18next.config';
-
-import '../styles/globals.css';
+import { store } from 'src/Redux';
+import 'src/Styles/globals.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <ThemeProvider storageKey='next-theme' attribute='class'>
-        <Provider store={store}>
+      <Provider store={store}>
+        <ThemeProvider storageKey='next-theme' attribute='class'>
           <Component {...pageProps} />
-        </Provider>
-      </ThemeProvider>
+        </ThemeProvider>
+      </Provider>
     </>
   );
 }
-export default appWithTranslation(MyApp, nextI18NextConfig);
+export default appWithTranslation(MyApp);

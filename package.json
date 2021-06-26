@@ -1,17 +1,20 @@
 {
   "name": "next-starter",
-  "version": "0.1.0",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
+    "clean": "rm -rf .next coverage",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "NODE_ENV=test jest"
+    "test": "NODE_ENV=test jest",
+    "test:cover": "NODE_ENV=test jest --collect-coverage"
   },
   "dependencies": {
     "@heroicons/react": "^1.0.1",
     "axios": "^0.21.1",
+    "framer-motion": "^4.1.17",
     "next": "11.0.0",
     "next-i18next": "^8.5.1",
     "next-themes": "0.0.14",

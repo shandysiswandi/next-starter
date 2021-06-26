@@ -1,11 +1,16 @@
 .git/
+.github/
 .next/
 .vscode/
-.github/
+coverage/
+docs/
 node_modules/
+tests/
 
 .dockerignore
 .gitignore
+CHANGELOG.md
 Dockerfile
+LICENSE
 Makefile
 README.md
