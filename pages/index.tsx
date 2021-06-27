@@ -10,7 +10,6 @@ import {
 
 import { Head } from '../src/Components/Head';
 import { SwitchDarkMode } from 'src/Components/SwitchDarkMode';
-// import { Loading } from 'src/Components/Loading';
 
 export default function Home() {
   const { t } = useTranslation('common');
@@ -19,8 +18,6 @@ export default function Home() {
   return (
     <>
       <Head title='Home' />
-
-      {/* <Loading /> */}
 
       <div className='flex flex-col min-h-screen'>
         <header className='border-b dark:border-gray-700'>
@@ -142,7 +139,7 @@ export default function Home() {
               </div>
             </div>
 
-            <h1 className='dark:text-white text-9xl'>
+            <h1 className='dark:text-white text-9xl font-nunito'>
               {t('welcome', { name: 'PAPA' })}
             </h1>
           </div>
@@ -152,10 +149,10 @@ export default function Home() {
   );
 }
 
-export async function getStaticProps(context: any) {
+export const getStaticProps = async (context: any) => {
   return {
     props: {
       ...(await serverSideTranslations(context.locale, ['common'])),
     },
   };
-}
+};

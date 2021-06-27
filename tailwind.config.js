@@ -3,7 +3,11 @@ module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './src/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class', // or 'media' or 'class' or 'false
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        nunito: ['Nunito'],
+      },
+    },
   },
   variants: {
     extend: {},
